@@ -4,17 +4,17 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-first_page = 'https://stackoverflow.com/questions/tagged/android?tab=newest'
+first_page = 'https://stackoverflow.com/questions/tagged/android?tab=newest'  ##  newest questions posted
 questions_in_a_week = []
-last_Q_found = False
+last_Q_found = False   ## the last questions find is based on the time limitation within a week(7 days) (threshold to stop)
 current_page = first_page
 next_page = 1
-while not last_Q_found:
+while not last_Q_found:                                                       
     bs = BeautifulSoup(requests.get(current_page).text, 'html.parser')
     table1 = bs.find('div', {'id': 'questions'})
     for i in range(1, len(table1.contents)):
         temp = table1.contents[i]
-        try:
+        try:                   ## some questions do not have vote yet
             vote_temp = temp.find('span', {'class': 'vote-count-post'})
         except TypeError:
             break

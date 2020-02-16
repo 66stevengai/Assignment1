@@ -19,7 +19,7 @@ while not last_Q_found:
         except TypeError:
             break
         votes = int(''.join(vote_temp.find('strong')))
-        time_ = temp.find('span', {'class': 'relativetime'})['title']
+        time_ = temp.find('span', {'class': 'relativetime'})['title'][:-1]+'UTC'
         title_ = temp.find('a', {'class': 'question-hyperlink'}).contents[0]
         url_ = temp.find('a', {'class': 'question-hyperlink'})['href']
 

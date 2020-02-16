@@ -26,6 +26,7 @@ When you see the votes numbers under the "10 most voted Android-related question
 You will see the most voted Android-related questions is 2343. Click this question, then, you will see under this question there are "Asked, Active, and Viewed". This website's time rule is based on 'Active' not 'Asked'. This is a paradox from our requirments. So, I implemented this part as 'Asked' (which the question post) not 'Active' (discussed). This is acturally can be a defect for people who just wants to see the trends of Android problems based on these questions. Because, those 'Active' questions will disturb them to see the real trends of this field. See pictures below. 
 
 ![github-small](https://github.com/66stevengai/Assignment1/blob/master/Images/Search%20results.png)
+![github-small](https://github.com/66stevengai/Assignment1/blob/master/Images/Question.png)
 
 ## Improvements:
 1. It takes me a while to try to use the API of this website, but I failed. So, I just used the dumbest way to "manually" scrape content from this website. Later, I'll try to figure out how to use the API of this website. <br />
